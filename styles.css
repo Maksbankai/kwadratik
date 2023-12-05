@@ -1,0 +1,58 @@
+*{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.big_kubik{
+    border: black solid 10px;
+    height: 400px;
+    width: 400px;
+}
+.small_kubik{
+    background: green;
+    color:black;
+    opacity: .7;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+
+    animation-name: tudasuda;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+.big_kubik:hover .small_kubik{
+    animation-play-state: paused;
+
+}
+
+@keyframes tudasuda{
+    0%{
+        transform: translateX(0) translateY(0);
+        /*color: white;
+        background: black;*/
+    }
+    25%{
+         transform: translateX(100%);
+         color: blue;
+         background: yellow;
+    }
+    50%{
+         transform: translateX(100%) translateY(100%);  
+         background: black;
+         color: white;
+    }
+    75%{
+        transform: translateX(0%) translateY(100%);
+        color: green;
+        background: rgb(255, 145, 0);
+    }
+    100%{
+            transform: translateX(0) translateY(0);
+    }
+}
